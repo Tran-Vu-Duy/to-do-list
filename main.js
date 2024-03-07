@@ -1,5 +1,7 @@
+
 const addinput = document.getElementById('addinput');
 const taskList = document.getElementById('taskList');
+
 
 function addTask(){
     const taskText = addinput.value.trim();
@@ -25,7 +27,6 @@ function addTask(){
 
     }
 }
-loadTaskToStorage(); 
 
 function completeTask(event){
     const task  = event.target;
@@ -43,5 +44,16 @@ function saveTask(){
     const taskItems = taskList.getElementsByTagName('li');
     for(let i =0 ; i< taskItems.length ; i++){
         tasks.push(taskItems[i].textContent);
+        console.log(tasks);
     }
+
+    localStorage.setItem('todoSave',tasks);
 }
+function loadlocal(){
+    return localStorage.getItem('todoSave').split(',');
+}
+const enterBtn = document.getElementById('addinput');
+enterBtn.addEventListener("keypress",function(e){
+    if(e.key ==="Enter" && enterBtn.value != null)
+    addTask();
+})

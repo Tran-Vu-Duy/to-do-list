@@ -55,6 +55,10 @@ body{
     border-radius: 5px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.addbtn:hover{
+    background-color:aqua;
+}
+
 #taskList{
     border-radius: 10px;
     width: 100%;
@@ -62,6 +66,9 @@ body{
     background-color: #fff;
     padding: 30px 20px;
     margin-top: 10px;
+}
+#tasList li:hover{
+    background-color: aquamarine;
 }
 #taskList li{
     border-radius: 10px;
@@ -94,5 +101,9 @@ body{
     border: 1px solid #000 ;
     outline: none;
     border-radius: 5px;
-    color: #fff;
+    color: #fff;'
+    cursor: pointer;
+}
+.deletebtn:hover{
+    background-color: brown;
 }
